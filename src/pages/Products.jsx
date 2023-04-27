@@ -1,17 +1,18 @@
+import React from 'react';
 import { useParams } from "react-router-dom";
 import { useEffect, useContext } from "react";
 import { collection, query, getDocs, where } from "firebase/firestore";
-import { database } from "../../app/firebase";
+import { database } from '../app/firebase';
 import { useState } from "react";
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import { ContextBox } from '../../App'
-import module from './Category.module.scss'
+import { ContextBox } from '../App';
 import { Link } from "react-router-dom";
+import module from './Products.module.scss'
 
-const Category = (props) => {
+const Products = (props) => {
     const id = useParams()
-    const [products, setProducts] = useState([])
+    const [towars, setTowars] = useState([])
     const [box, setBox] = useContext(ContextBox)
     useEffect(() => {
         getData()
@@ -19,13 +20,13 @@ const Category = (props) => {
 
     async function getData() {
         const q = query(collection(database, "product"), where("idCategory", "==", id.id));
-        const allProducts = await getDocs(q)
-        let products = []
-        allProducts.forEach(product => {
-            products.push({ ...product.data(), id: product.id })
+        const allTowars = await getDocs(q)
+        let towars = []
+        allTowars.forEach(product => {
+            towars.push({ ...product.data(), id: product.id })
         })
-        setProducts(products)
-        console.log(products)
+        setTowars(towars)
+        console.log(towars)
     }
 
     function addToCart(event) {
@@ -51,28 +52,27 @@ const Category = (props) => {
         }
     }
 
-    const viewProducts = products.map((product, index) => {
+    const viewTowars = towars.map((towars, index) => {
         return (
             <div className={module.maincards}>
                 <Card text="123123" key={index}>
-                    <div className="id-card" data-id={product.id}></div>
-                    <Link to='/products'><Card.Img variant="top" src={product.photo} /></Link>
+                    <div className="id-card" data-id={towars.id}></div>
+                    <Card.Img variant="top" src={towars.photo} />
                     <Card.Body>
                         <div className={module.name}>
                             <Card.Title>
-                                {product.name}
+                                {towars.name}
                             </Card.Title>
                         </div>
                         <div className={module.description}>
                             <Card.Text>
-                                {product.description}
+                                {towars.description}
                             </Card.Text>
                         </div>
                     </Card.Body>
                     <div className={module.price}>
                         <Card.Footer>
-                            <div className={module.price}><span className="price-product">{product.price}</span>$</div>
-                            <div><button onClick={addToCart} className={module.btncart}>Добавить в корзину</button></div>
+                            <div className={module.price}><span className="price-product">{towars.price}</span>$</div>
                         </Card.Footer>
                     </div>
                 </Card>
@@ -83,15 +83,15 @@ const Category = (props) => {
     return (
         <div>
             <div className={module.container}>
-                <h1 className={module.text1}>Страница категории</h1>
+                <h1 className={module.text1}>Страница Товара</h1>
                 <div className={module.main}>
                     <CardGroup>
-                        {viewProducts}
+                        {viewTowars}
                     </CardGroup>
                 </div>
             </div>
         </div>
-    )
-};
+    );
+}
 
-export default Category;
+export default Products;

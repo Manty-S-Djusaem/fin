@@ -3,6 +3,9 @@ import { useReducer } from 'react'
 import Modal from "../components/Modal";
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from '../app/firebase'
+import module from './Main.module.scss'
+import back from '../assets/mainback.jpg'
+import { Link } from "react-router-dom";
 
 const Main = (props) => {
     const [modal, dispatch] = useReducer(reducer, {
@@ -46,13 +49,17 @@ const Main = (props) => {
     if (user) {
         if (user.emailVerified)
             return (
-                <div className="container center-flex">
-                  
+
+                <div className={module.main}>
+                   <h1 className={module.text1}>Главная</h1>
+
+                   <p className={module.text2}>Ничё ещё нет</p>
                 </div>
+
             )
         else
             return (
-                <div className="container center-flex">
+                <div className={module.main}>
                     Главная страница
                     <div>Вам нужно подтвердить почту</div>
                     <div onClick={signOut}>
@@ -62,33 +69,21 @@ const Main = (props) => {
             )
     } else {
         return (
-            <div className="container center-flex">
-
+            <div className={module.dsds}>
                 <div onClick={() => openModal('cart')}>
                 </div>
                 <div onClick={() => openModal('registration')}>
                 </div>
                 <div>
                     <div onClick={() => openModal('Password-recovery')}>
-                </div>
+                    </div>
                 </div>
                 <Modal modal={modalState} />
             </div>
         );
     }
-};
+}; <div className="main_btn">
+    {/* <button className={module.btn}><Link to='/catalogue'>Каталог</Link></button> */}
+</div>
 
 export default Main;
-
-// import React from 'react';
-// import module from './Main.module.scss'
-
-// function MainMian(props) {
-//     return (
-//         <div className={module.cont}>
-            
-//         </div>
-//     );
-// }
-
-// export default MainMian;

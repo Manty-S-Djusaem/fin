@@ -1,9 +1,10 @@
-import {useState, useEffect} from "react"
+import { useState, useEffect } from "react"
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { collection, query, getDocs } from "firebase/firestore";
 import { database } from "../../app/firebase";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import module from './Catalogue.module.scss'
 
 const Catalog = (props) => {
     const [products, setProducts] = useState([])
@@ -20,28 +21,11 @@ const Catalog = (props) => {
         const querySnapshot = await getDocs(q);
         let category = []
         querySnapshot.forEach((doc) => {
-           category.push({...doc.data(), id: doc.id})
-           console.log(doc.id)
+            category.push({ ...doc.data(), id: doc.id })
+            console.log(doc.id)
         });
         setCategories(category)
     }
-
-    /*const showAllProducts = products.map((product, index) => {
-        return (
-            <Card text="123123">
-                <Card.Img variant="top" src={product.image} />
-                <Card.Body>
-                    <Card.Title>{console.log(product)}</Card.Title>
-                    <Card.Text>
-                    {product.description}
-                    </Card.Text>
-                </Card.Body>
-                <Card.Footer>
-                    <small className="text-muted">{product.price}$</small>
-                </Card.Footer>
-            </Card>
-        )
-    })*/
 
     const showAllCategory = categories.map((category, index) => {
         return (
@@ -58,16 +42,14 @@ const Catalog = (props) => {
             </Link>
         )
     })
-    
+
     return (
-        <div>
-            <div>
-                <div>
-                    {/*showAllProducts*/}
-                    <CardGroup>
-                        {showAllCategory}
-                    </CardGroup>
-                </div>
+        <div className={module.main}>
+            <div className={module.boxcard}>
+                {/*showAllProducts*/}
+                <CardGroup>
+                    {showAllCategory}
+                </CardGroup>
             </div>
         </div>
     )

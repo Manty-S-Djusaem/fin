@@ -32,6 +32,8 @@ const Header = (Props) => {
                     <a href='#'>СВЯЗАТЬСЯ С НАМИ</a>
                     <a href='#'>АКЦИИ</a>
                 </div>
+
+                
                 {burger && (<div className={module.container_burger}>
                     <a href='/'>ГЛАВНАЯ</a>
                     <a href="/catalogue">КАТАЛОГ</a>

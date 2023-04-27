@@ -18,7 +18,6 @@ const ProductPage = (props) => {
 
     return (
         <div>
-            <Header />
             <div className="product">
                 <div className="back"><Link to={'/catalog'}>Вернуться назад</Link></div>
                 <div className="product-info">
@@ -43,7 +42,6 @@ const ProductPage = (props) => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 };

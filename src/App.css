@@ -1,12 +1,16 @@
 header {
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    background-color:  #0B0C10;
     height: 70px;
     width: 100%;
     position: relative;
 }
 body{
-    background-color: #CACACA;
+    background-image: url('./assets/wallpaperflare.com_wallpaper.jpg');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0B0C10;
     margin:0;
 }
 footer{

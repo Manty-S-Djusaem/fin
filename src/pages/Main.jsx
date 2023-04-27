@@ -3,6 +3,7 @@ import { useReducer } from 'react'
 import Modal from "../components/Modal";
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from '../app/firebase'
+import module from './Main.module.scss'
 
 const Main = (props) => {
     const [modal, dispatch] = useReducer(reducer, {
@@ -47,22 +48,22 @@ const Main = (props) => {
         if (user.emailVerified)
             return (
                 <div className="container center-flex">
-                    Главная страница
-                    <div>Поздравляю, вы вошли в свой аккаунт {user.displayName}</div>
-                    <div>Ваша почта: {user.email}</div>
+                    <h1 className={module.main}>Главная страница</h1>
+                    <div className={module.textdesc}>Поздравляю, вы вошли в свой аккаунт {user.displayName}</div>
+                    <div className={module.textdesc}>Ваша почта: {user.email}</div>
                     <img src={user.photoURL} alt="" />
                     <div onClick={signOut}>
-                        <Button text='Выйти с аккаунта' />
+                        <div><Button className={module.out} text='Выйти с аккаунта' /></div>
                     </div>
                 </div>
             )
         else
             return (
                 <div className="container center-flex">
-                    Главная страница
-                    <div>Вам нужно подтвердить почту</div>
+                    <h1 className={module.main}>Главная страница</h1>
+                    <div className={module.textdesc}>Вам нужно подтвердить почту</div>
                     <div onClick={signOut}>
-                        <Button text='Выйти с аккаунта' />
+                        <div><Button className={module.out} text='Выйти с аккаунта' /></div>
                     </div>
                 </div>
             )

@@ -1,0 +1,50 @@
+.container {
+
+    .text1 {
+        display: flex;
+        justify-content: center;
+        color: #c5c6c7;
+    }
+
+    .main {
+        display: flex;
+
+        img {
+            display: flex;
+            max-width: 250px;
+            display: flex;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0e1111;
+            display: flex;
+        }
+    }
+}
+
+
+.name{
+    color: #c5c6c7;
+    margin-bottom: 5px;
+}
+
+.description{
+    color: #c5c6c7;
+    margin-bottom: 5px;
+}
+
+.price{
+    display: flex;
+    color: #66fcf1;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    text-decoration: overline;
+    font-size: 15px;
+}
+
+.btncart{
+    color: #66fcf1;
+    border: solid 1px #66fcf1;
+    margin-bottom: 5px;
+}

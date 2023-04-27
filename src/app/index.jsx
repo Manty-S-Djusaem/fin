@@ -12,6 +12,7 @@ import Password_recovery from "../components/auth/Password-recovery.jsx";
 import MainMian from '../pages/MainMian.jsx'
 import ProductPage from '../components/header/ProductPage.jsx'
 import Category from "../components/header/Category.jsx";
+import Products from "../pages/Products.jsx";
 // import Catalog from '../pages/Catalog'
 // import ProductPage from '../pages/ProductPage'
 
@@ -79,6 +80,16 @@ const router = createBrowserRouter([
       </div>
     )
   },
+  {
+    path: `${path}/products/:id`,
+    element: (
+      <div>
+        <Header />
+        <Products />
+        <Footer />
+      </div>
+    )
+  },
   // ---------------------------------------------------------
   // ---------------------------------------------------------
   // ---------------------------------------------------------
@@ -119,6 +130,7 @@ const router = createBrowserRouter([
         <Header />
         <MainMian />
         <Footer />
+
       </div>
     )
   },
@@ -140,10 +152,10 @@ const router = createBrowserRouter([
     path: `/category/:category`,
     element: <Category />
   },
-  {
-    path: `${path}/products/:id`,
-    element: <ProductPage />
-  },
+  // {
+  //   path: `${path}/products`,
+  //   element: <ProductPage />
+  // },
   {
     path: `/cart`,
     element: <Cart />

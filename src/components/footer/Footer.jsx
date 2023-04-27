@@ -6,54 +6,72 @@ import location_icon from '../assets/location_icons.png'
 import inst from '../assets/instag.png'
 import tg from '../assets/teleg.png'
 import ut from '../assets/face.png'
+import discord from '../assets/discord.png'
 function Footer(props) {
     return (
         <footer>
             <div className={module.container}>
                 <div className={module.contacts}>
                     <div className={module.company}>
-                    
-                        <ul><h4>Компания</h4>
+
+                       <h4>Компания</h4>
                             <li>О нас</li>
                             <li>Оферта</li>
                             <li>Поставщикам</li>
-                        </ul>
+                        
                     </div>
                     <div className={module.customers}>
-                    
-                             <ul><h4>Покупателям </h4>
-                                <li>Как оформить заказ</li>
-                                <li>Условия доставки</li>                            
-                            </ul>
+
+                       <h4>Покупателям </h4>
+                            <li>Как оформить заказ</li>
+                            <li>Условия доставки</li>
+                       
                     </div>
 
 
 
                     <div className={module.our_conts}>
-                    <ul> <h4> Наши контакты </h4>
-                            <li className={module.phone_num}>  <p> <img  id={module.phone_icon}src={phone_icon}></img> +996 (550)(205)(707) </p></li> 
+                         <h4> Наши контакты </h4>
+                            <li className={module.phone_num}>  <p> <img id={module.phone_icon} src={phone_icon}></img> +996 (550)(205)(707) </p></li>
                             <li className={module.phone_num}> <p> <img id={module.email_icon} src={email_icon}></img>  sweven@gmail.com  </p> </li>
                             <li className={module.phone_num}> <p> <img id={module.location_icon} src={location_icon}></img> ул. Иманова 71/5 </p> </li>
-                        </ul>
-                    </div>         
-                </div> <div className={module.line}> </div>    
-                        <div> <img id={module.icon} src={inst}></img> <img id={module.icon} src={tg}></img> <img id={module.icon} src={ut}></img> </div>
+                        
+                    </div>
+                </div> <div className={module.line}></div>
 
-             </div>               
-              
+                <div>
+                    <ul>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span class="fa fa-discord"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://steamcommunity.com/id/djusay/">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span class="fa fa-steam"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                {/* <div>
+                    <img id={module.icon} src={discord}></img>
+                    <img id={module.icon} src={tg}></img>
+                    <img id={module.icon} src={ut}></img>
+                </div> */}
+
+            </div>
+
         </footer>
     );
 }
 
 export default Footer;
-
-
-// const Footer = (Props) => {
-//     return (
-//         <>
-            
-//         </footer>
-//     );
-// };
-
-// export default Footer
