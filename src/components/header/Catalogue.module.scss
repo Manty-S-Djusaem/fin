@@ -1,14 +1,26 @@
 .main{
-    display: flex;
+    width: 200px;
+}
 
-    img{
-        max-width: 250px;
+.cont {
+    // display: flex;
+    // justify-content: space-around;
+
+    img {
+        width: 250px;
         display: flex;
+        justify-content: space-around;
     }
 
-    a{
+    a {
         text-decoration: none;
         color: #c5c6c7;
         display: flex;
+        max-width: 10px;
     }
+}
+
+.photo{
+    display: flex;
+
 }

@@ -9,6 +9,11 @@ import router from '/src/app/index.jsx'
 import { useState } from 'react'
 import { auth } from '/src/app/firebase'
 import { useAuthState } from 'react-firebase-hooks/auth'
+import sasa from '../assets/sasa.png'
+import home from '../assets/Home.png'
+import bookmark from '../assets/Bookmark.png'
+
+
 
 const Header = (Props) => {
     const [burger, setBurger] = useState(false)
@@ -25,7 +30,7 @@ const Header = (Props) => {
             <header>
 
             <div className={module.header_a}>
-                <Link to='/'><img src={logo}></img></Link>
+                <Link to='/'><img src={sasa}></img></Link>
                 <div className={module.container}>
                     <Link to='/'>ГЛАВНАЯ</Link>
                     <Link to='/catalogue'>КАТАЛОГ</Link>
@@ -44,10 +49,10 @@ const Header = (Props) => {
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <div className={module.head_pic}>
-                    <a href='search'><img src={vector}></img></a>
-                    <Link to='/cart'><img src={cart}></img></Link>
-                    <Link to='/main'><img src={lupa}></img></Link>
-                    <a href='#'><img src={heart}></img></a>
+                    {/* <a href='search'><img src={vector}></img></a> */}
+                    <Link to='/cart'><img src={home}></img></Link>
+                    <Link to='/main'><img src={bookmark}></img></Link>
+                    {/* <a href='#'><img src={heart}></img></a> */}
                 </div>
             </div>
         </header>

@@ -30,28 +30,30 @@ const Catalog = (props) => {
     const showAllCategory = categories.map((category, index) => {
         return (
             <Link to={`/category/${category.id}`}>
-                <Card text="123123" key={index}>
-                    <Card.Img variant="top" src={category?.img} />
-                    <Card.Body>
-                        <Card.Title>{category.name}</Card.Title>
-                        <Card.Text>
-                            {category.description}
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
+                
+                <div className={module.main}>
+                    <Card text="123123" key={index}>
+                        <div className={module.photo}><Card.Img variant="top" src={category?.img} /></div>
+                        <Card.Body>
+                            <Card.Title>{category.name}</Card.Title>
+                            <Card.Text>
+                                {category.description}
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+                
             </Link>
         )
     })
 
     return (
-        <div className={module.main}>
-            <div className={module.boxcard}>
-                {/*showAllProducts*/}
-                <CardGroup>
-                    {showAllCategory}
-                </CardGroup>
-            </div>
+        <div className={module.cont}>
+            <CardGroup>
+                {showAllCategory}
+            </CardGroup>
         </div>
+
     )
 };
 
