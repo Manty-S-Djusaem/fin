@@ -29,9 +29,11 @@ const Catalog = (props) => {
 
     const showAllCategory = categories.map((category, index) => {
         return (
-            <Link to={`/category/${category.id}`}>
-                
-                <div className={module.main}>
+
+            <div className={module.main}>
+                <Link to={`/category/${category.id}`}>
+
+
                     <Card text="123123" key={index}>
                         <div className={module.photo}><Card.Img variant="top" src={category?.img} /></div>
                         <Card.Body>
@@ -41,16 +43,17 @@ const Catalog = (props) => {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </div>
-                
-            </Link>
+
+                </Link >
+            </div>
+
         )
     })
 
     return (
         <div className={module.cont}>
-            <CardGroup>
-                {showAllCategory}
+            <CardGroup className={module.cardg}>
+                <div className={module.showAll}>{showAllCategory}</div>
             </CardGroup>
         </div>
 

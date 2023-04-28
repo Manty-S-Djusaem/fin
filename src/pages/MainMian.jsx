@@ -48,12 +48,19 @@ const Main = (props) => {
 
     if (user) {
         if (user.emailVerified)
+
             return (
 
                 <div className={module.main}>
-                   <h1 className={module.text1}>Главная</h1>
+                    <h1 className={module.text1}>Главная</h1>
 
-                   <p className={module.text2}>Ничё ещё нет</p>
+                    <p className={module.text2}>Ничё ещё нет</p>
+
+                    <p className={module.pp}></p>
+
+                    <div className={module.photo1}>
+                        {/* <img src="https://images.pexels.com/photos/460736/pexels-photo-460736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img> */}
+                    </div>
                 </div>
 
             )
@@ -80,7 +87,7 @@ const Main = (props) => {
                 </div>
                 <Modal modal={modalState} />
             </div>
-        );
+        )
     }
 }; <div className="main_btn">
     {/* <button className={module.btn}><Link to='/catalogue'>Каталог</Link></button> */}

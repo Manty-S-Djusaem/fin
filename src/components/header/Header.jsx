@@ -21,42 +21,38 @@ const Header = (Props) => {
     function burgerMenu(e) {
         setBurger(!burger)
     }
-    
+
     const [user, loading, error] = useAuthState(auth);
 
-    if (user){
-        if(user.emailVerified)
-        return(
-            <header>
+    if (user) {
+        if (user.emailVerified)
+            return (
+                <header>
 
-            <div className={module.header_a}>
-                <Link to='/'><img src={sasa}></img></Link>
-                <div className={module.container}>
-                    <Link to='/'>ГЛАВНАЯ</Link>
-                    <Link to='/catalogue'>КАТАЛОГ</Link>
-                    <a href='#'>СВЯЗАТЬСЯ С НАМИ</a>
-                    <a href='#'>АКЦИИ</a>
-                </div>
+                    <div className={module.header_a}>
+                        <Link to='/'><img src={sasa}></img></Link>
+                        <div className={module.container}>
+                            <Link to='/'>ГЛАВНАЯ</Link>
+                            <Link to='/catalogue'>КАТЕГОРИИ</Link>
+                        </div>
 
-                
-                {burger && (<div className={module.container_burger}>
-                    <a href='/'>ГЛАВНАЯ</a>
-                    <a href="/catalogue">КАТАЛОГ</a>
-                    <a href='#'>СВЯЗАТЬСЯ С НАМИ</a>
-                    <a href='#'>АКЦИИ</a>
-                </div>)}
-                <div className={module.burger} onClick={burgerMenu}>
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <div className={module.head_pic}>
-                    {/* <a href='search'><img src={vector}></img></a> */}
-                    <Link to='/cart'><img src={home}></img></Link>
-                    <Link to='/main'><img src={bookmark}></img></Link>
-                    {/* <a href='#'><img src={heart}></img></a> */}
-                </div>
-            </div>
-        </header>
-        )
+
+                        {burger && (<div className={module.container_burger}>
+                            <a href='/'>ГЛАВНАЯ</a>
+                            <a href="/catalogue">КАТЕГОРИИ</a>
+                        </div>)}
+                        <div className={module.burger} onClick={burgerMenu}>
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <div className={module.head_pic}>
+                            {/* <a href='search'><img src={vector}></img></a> */}
+                            <Link to='/cart'><img src={bookmark}></img></Link>
+                            <Link to='/main'><img src={home}></img></Link>
+                            {/* <a href='#'><img src={heart}></img></a> */}
+                        </div>
+                    </div>
+                </header>
+            )
     }
 
     console.log(burger)

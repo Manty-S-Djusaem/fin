@@ -6,11 +6,9 @@ header {
     position: relative;
 }
 body{
-    background-image: url('./assets/wallpaperflare.com_wallpaper.jpg');
-
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #0B0C10;
+    background-color: #232b2b;
     margin:0;
 }
 footer{

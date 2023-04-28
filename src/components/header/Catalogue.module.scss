@@ -1,5 +1,5 @@
-.main{
-    width: 200px;
+.main {
+    // width: 200px;
 }
 
 .cont {
@@ -7,9 +7,7 @@
     // justify-content: space-around;
 
     img {
-        width: 250px;
-        display: flex;
-        justify-content: space-around;
+        width: 170px;
     }
 
     a {
@@ -18,9 +16,19 @@
         display: flex;
         max-width: 10px;
     }
+
+    // .cardg{
+    //     display: flex;
+    //     justify-content: space-around;
+    // }
+
+    .showAll {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
 }
 
-.photo{
-    display: flex;
-
+.photo {
+    width: 150px;
 }
