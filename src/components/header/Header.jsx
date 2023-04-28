@@ -65,22 +65,18 @@ const Header = (Props) => {
                 <div className={module.container}>
                     <Link to='/'>ГЛАВНАЯ</Link>
                     <Link to='/catalogue'>КАТАЛОГ</Link>
-                    <a href='#'>СВЯЗАТЬСЯ С НАМИ</a>
-                    <a href='#'>АКЦИИ</a>
                 </div>
                 {burger && (<div className={module.container_burger}>
                     <a href='/'>ГЛАВНАЯ</a>
-                    <a href="/catalogue">КАТАЛОГ</a>
-                    <a href='#'>СВЯЗАТЬСЯ С НАМИ</a>
-                    <a href='#'>АКЦИИ</a>
+                    <a href="/catalogue">КАТЕГОРИИ</a>
                 </div>)}
                 <div className={module.burger} onClick={burgerMenu}>
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <div className={module.head_pic}>
                     <a href='search'><img src={vector}></img></a>
-                    <Link to='/cart'><img src={cart}></img></Link>
-                    <Link to='/authorization'><img src={lupa}></img></Link>
+                    <Link to='/cart'><img src={bookmark}></img></Link>
+                    <Link to='/authorization'><img src={home}></img></Link>
                     <a href='#'><img src={heart}></img></a>
                 </div>
             </div>
