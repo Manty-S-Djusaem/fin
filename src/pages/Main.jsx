@@ -48,7 +48,6 @@ const Main = (props) => {
         if (user.emailVerified)
             return (
                 <div className="container center-flex">
-                    <h1 className={module.main}>Главная страница</h1>
                     <div className={module.textdesc}>Поздравляю, вы вошли в свой аккаунт {user.displayName}</div>
                     <div className={module.textdesc}>Ваша почта: {user.email}</div>
                     <img src={user.photoURL} alt="" />

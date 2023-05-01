@@ -64,7 +64,7 @@ const Authorization = (props) => {
             <form onSubmit={signIn}>
                 <div className={module.input_login}>
                     <p>E-mail</p>
-                    <label htmlFor="login"></label>
+                    <label htmlFor="login" className={module.input1}></label>
                     <div> <img id={module.img} src={Email_icon}/> <input type="text" name="login" placeholder="введите логин или почту" onChange={inputLogin}/>  </div> 
                     <div className={module.line}> </div> 
                 </div>

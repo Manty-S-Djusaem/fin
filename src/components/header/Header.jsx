@@ -45,10 +45,8 @@ const Header = (Props) => {
                             <i class="fa-solid fa-bars"></i>
                         </div>
                         <div className={module.head_pic}>
-                            {/* <a href='search'><img src={vector}></img></a> */}
                             <Link to='/cart'><img src={bookmark}></img></Link>
                             <Link to='/main'><img src={home}></img></Link>
-                            {/* <a href='#'><img src={heart}></img></a> */}
                         </div>
                     </div>
                 </header>
@@ -61,10 +59,10 @@ const Header = (Props) => {
         <header>
 
             <div className={module.header_a}>
-                <Link to='/'><img src={logo}></img></Link>
+                <Link to='/'><img src={sasa}></img></Link>
                 <div className={module.container}>
                     <Link to='/'>ГЛАВНАЯ</Link>
-                    <Link to='/catalogue'>КАТАЛОГ</Link>
+                    <Link to='/catalogue'>КАТЕГОРИИ</Link>
                 </div>
                 {burger && (<div className={module.container_burger}>
                     <a href='/'>ГЛАВНАЯ</a>
@@ -74,10 +72,8 @@ const Header = (Props) => {
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <div className={module.head_pic}>
-                    <a href='search'><img src={vector}></img></a>
                     <Link to='/cart'><img src={bookmark}></img></Link>
                     <Link to='/authorization'><img src={home}></img></Link>
-                    <a href='#'><img src={heart}></img></a>
                 </div>
             </div>
         </header>
